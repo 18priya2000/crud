@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Update Details {{ student.id }}</h2>
+    
+    <form method="POST">
+        <p>
+            <label>Name:</label><br>
+            <input type="text" name="name" value="{{ student.name }}">
+            </p>
+          <p>
+            <label>Email:</label><br>
+            <input type="email" name="email" value="{{ student.email }}">
+        </p>
+            <p>
+            <label>Standard:</label><br>
+            <input type="number" name="standard" value="{{ student.standard }}">
+              </p>
+        <p>
+            <label>Division:</label><br>
+            <input type="text" name="devision" value="{{ student.devision }}">
+        </p>
+        
+        <button type="submit">Update </button>
+    </form>
+</body>
+</html>

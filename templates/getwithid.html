@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search</title>
+</head>
+<body>
+
+    <h2>Search Student</h2>
+    
+    <form action="/getwithid" method="POST">
+        <input type="number" name="student_id" placeholder="Enter ID here..." required>
+        <button type="submit">Search</button>
+    </form>
+
+    <hr>
+
+    {% if student %}
+        <h3>Results:</h3>
+        <p><strong>Name:</strong> {{ student.name }}</p>
+        <p><strong>ID:</strong> {{ student.id }}</p>
+        <p><strong>Email:</strong> {{ student.email }}</p>
+        <p><strong>Standard:</strong> {{ student.standard }}</p>
+        <p><strong>Division:</strong> {{ student.devision }}</p>
+    {% elif request.method == 'POST' %}
+        <p >No student fount</p>
+    {% endif %}
+
+</body>
+</html>
