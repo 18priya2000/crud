@@ -44,7 +44,6 @@ def create_app():
             if user and user.password == password:
 
                 session.permanent = True
-                session["user"] = user.username
                 app.config["SESSION_COOKIE_SECURE"] = True
                 app.permanent_session_lifetime = timedelta(minutes=60)
                 login_user(user)
